@@ -50,6 +50,7 @@ class ModelTester:
         return {"success": summary.status == "passed", "details": summary.format()}
 
     async def __call__(self, model_id, model_url=None):
+        import shutil
         from bioimageio.core import test_model
         from bioimageio.spec import save_bioimageio_package_as_folder
 
@@ -64,8 +65,12 @@ class ModelTester:
 
         assert package_path.exists()
 
-        print("package path", package_path)
-        return test_model(package_path / "rdf.yaml").model_dump(mode="json")
+        result = test_model(package_path / "rdf.yaml").model_dump(mode="json")
+    
+        # Cleanup after test run
+        shutil.rmtree(str(package_path))
+        
+        return result
 
 
 async def ping(context):
