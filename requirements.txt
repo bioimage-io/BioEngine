@@ -1,6 +1,9 @@
-hypha-rpc
-hypha>=0.15.45
+hypha-rpc==0.20.47
+hypha>=0.20.47.post12
 PyYAML==6.0.1
 hypha-launcher
 pyotritonclient
 simpervisor
+numpy==1.26.4
+python-dotenv==1.0.1
+ray[serve]==2.33.0
