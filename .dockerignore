@@ -1,0 +1,49 @@
+# Environment files
+.env
+.env.*
+*.env
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.eggs/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Log files
+*.log
+logs/
+
+# Local development files
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Documentation
+docs/
+*.md
+LICENSE
+
+# Test files
+tests/
+test/ 
